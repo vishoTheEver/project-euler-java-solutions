@@ -12,10 +12,13 @@ public class Problems {
         int t1 = 1, t2 = 2;
         int sum = 0;
 
-        while(t2 < 4000000){
+        while(t2 <= n){
             if(t2 % 2 == 0) sum += t2;
+
+            // t1 changes to t2 & t2 changes to t1 + t2
+            int temp = t1;
             t1 = t2;
-            t2 = t1 + t2;
+            t2 = temp + t2;
         }
         return sum;
     }
