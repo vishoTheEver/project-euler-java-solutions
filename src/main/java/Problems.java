@@ -6,4 +6,17 @@ public class Problems {
         for(int i = 0; i < n; i++) if(i%3==0 || i%5==0) sum+=i;
         return sum;
     }
+
+    // Problem 2: Even Fibonacci Numbers
+    public int evenFibonacciNumbers(int n){
+        int t1 = 1, t2 = 2;
+        int sum = 0;
+
+        while(t2 < 4000000){
+            if(t2 % 2 == 0) sum += t2;
+            t1 = t2;
+            t2 = t1 + t2;
+        }
+        return sum;
+    }
 }
