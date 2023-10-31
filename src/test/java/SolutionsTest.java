@@ -46,4 +46,11 @@ class SolutionsTest {
         assertEquals(2520, problems.smallestMultiple(1,10));
         assertEquals(232792560, problems.smallestMultiple(1,20));
     }
+
+    // Problem 6: Sum Square Difference
+    @Test
+    void test_sumSquareDifference(){
+        assertEquals(2640, problems.sumSquareDifference(1,10));
+        assertEquals(25164150, problems.sumSquareDifference(1,100));
+    }
 }

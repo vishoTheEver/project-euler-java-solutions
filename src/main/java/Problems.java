@@ -81,4 +81,16 @@ public class Problems {
         }
         return count;
     }
+
+    // Problem 6: Sum Square Difference
+    public long sumSquareDifference(int start, int end){
+        long sum_of_squares = 0;
+        long sum = 0; long square_of_sum;
+        for(long num = start; num < end+1; num++){
+            sum_of_squares += num * num;
+            sum += num;
+        }
+        square_of_sum = sum * sum;
+        return square_of_sum-sum_of_squares;
+    }
 }

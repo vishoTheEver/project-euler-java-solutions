@@ -17,5 +17,8 @@ public class ProblemsDriver {
 
         // Problem 5: Smallest Multiple
         System.out.println("Solution 5: " + problems.smallestMultiple(1,20));
+
+        // Problem 6: Sum Square Difference
+        System.out.println("Solution 6: " + problems.sumSquareDifference(1,100));
     }
 }
