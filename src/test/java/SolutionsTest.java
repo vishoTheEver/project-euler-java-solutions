@@ -39,4 +39,11 @@ class SolutionsTest {
         assertEquals(9009, problems.largestPalindromeNumber(2));
         assertEquals(906609, problems.largestPalindromeNumber(3));
     }
+
+    // Problem 5: Smallest Multiple
+    @Test
+    void test_smallestMultiple(){
+        assertEquals(2520, problems.smallestMultiple(1,10));
+        assertEquals(232792560, problems.smallestMultiple(1,20));
+    }
 }

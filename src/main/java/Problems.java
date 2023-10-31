@@ -62,4 +62,23 @@ public class Problems {
         for(int item: palindromes) if (max_palindrome < item) max_palindrome = item;
         return max_palindrome;
     }
+
+    // Problem 5: Smallest Multiple
+    public long smallestMultiple(int start, int end){
+        long count = (end+1)-1;
+        boolean found_smallest_multiple = false;
+        while(!found_smallest_multiple){
+            count++;
+            long cases_passed = 0;
+            for(int i = start; i < end+1; i++) {
+                if(count % i == 0) {
+                    cases_passed++;
+                }
+            }
+            if(cases_passed == end-start+1){
+                found_smallest_multiple = true;
+            }
+        }
+        return count;
+    }
 }

@@ -14,5 +14,8 @@ public class ProblemsDriver {
 
         // Problem 4: Largest Palindrome Product
         System.out.println("Solution 4: " + problems.largestPalindromeNumber(3));
+
+        // Problem 5: Smallest Multiple
+        System.out.println("Solution 5: " + problems.smallestMultiple(1,20));
     }
 }
