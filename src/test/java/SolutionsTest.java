@@ -32,4 +32,11 @@ class SolutionsTest {
         assertEquals(29, problems.largestPrimeFactor(13195));
         assertEquals(6857, problems.largestPrimeFactor(600851475143L));
     }
+
+    // Problem 4: Largest Palindrome Product
+    @Test
+    void test_largestPalindromeProduct(){
+        assertEquals(9009, problems.largestPalindromeNumber(2));
+        assertEquals(906609, problems.largestPalindromeNumber(3));
+    }
 }

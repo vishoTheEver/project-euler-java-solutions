@@ -45,4 +45,21 @@ public class Problems {
         // largest prime factor in n
         return prime_factors.get(prime_factors.size()-1); // last value is largest
     }
+
+    // Problem 4: Largest Palindrome Product
+    public int largestPalindromeNumber(int n){
+        // finding all palindromes between 10^(n-1) and 10^n-1
+        int min_num = (int) Math.pow(10,n-1);
+        int max_num = (int) Math.pow(10,n) - 1;
+        ArrayList<Integer> palindromes = new ArrayList<>();
+        for(int num1 = min_num; num1 < max_num+1; num1++) for(int num2 = min_num; num2 < max_num+1; num2++){
+                String product_str = String.valueOf(num1*num2);
+                String product_str_reversed = new StringBuilder(product_str).reverse().toString();
+                if(product_str.equals(product_str_reversed)) palindromes.add(Integer.parseInt(product_str));
+        }
+        // finding the max palindrome
+        int max_palindrome = palindromes.get(0);
+        for(int item: palindromes) if (max_palindrome < item) max_palindrome = item;
+        return max_palindrome;
+    }
 }
