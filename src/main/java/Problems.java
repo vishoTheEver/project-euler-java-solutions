@@ -1,3 +1,6 @@
+import java.math.BigInteger;
+import java.util.ArrayList;
+
 public class Problems {
 
     // Problem 1: Multiples of 3 or 5
@@ -21,5 +24,26 @@ public class Problems {
             t2 = temp + t2;
         }
         return sum;
+    }
+
+    // Problem 3: Largest Prime Factor
+    public long largestPrimeFactor(long n){
+        // factors of n
+        ArrayList<Long> factors = new ArrayList<>();
+        for(long i = 2; i < Math.sqrt(n); i++) if(n % i == 0) factors.add(i);
+
+        // prime factors of n
+        ArrayList<Long> prime_factors = new ArrayList<>();
+        for(long factor: factors) {
+            boolean is_prime = true;
+            for(long i = 2; i < factor; i++) if(factor % i == 0){
+                is_prime = false; // proven non-prime
+                break; // stops further
+            }
+            if(is_prime) prime_factors.add(factor);
+        }
+
+        // largest prime factor in n
+        return prime_factors.get(prime_factors.size()-1); // last value is largest
     }
 }

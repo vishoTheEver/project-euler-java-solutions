@@ -1,5 +1,5 @@
-import org.junit.Test;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -8,21 +8,28 @@ class SolutionsTest {
     private static Problems problems;
 
     @BeforeAll
-    public static void setUp(){
+    public static void setUp() {
         problems = new Problems();
     }
 
     // Problem 1: Multiples of 3 or 5
     @Test
     void test_multiplesOf3or5() {
-        assertEquals(problems.multiplesOf3or5(10), 23);
-        assertEquals(problems.multiplesOf3or5(1000), 233168);
+        assertEquals(23, problems.multiplesOf3or5(10));
+        assertEquals(233168, problems.multiplesOf3or5(1000));
     }
 
     // Problem 2: Even Fibonacci Numbers
     @Test
-    void test_evenFibonacciNumbers(){
-        assertEquals(problems.evenFibonacciNumbers(10), 10);
-        assertEquals(problems.evenFibonacciNumbers(4000000),4613732);
+    void test_evenFibonacciNumbers() {
+        assertEquals(10, problems.evenFibonacciNumbers(10));
+        assertEquals(4613732, problems.evenFibonacciNumbers(4000000));
+    }
+
+    // Problem 3: Largest Prime Factor
+    @Test
+    void test_largestPrimeFactor() {
+        assertEquals(29, problems.largestPrimeFactor(13195));
+        assertEquals(6857, problems.largestPrimeFactor(600851475143L));
     }
 }
