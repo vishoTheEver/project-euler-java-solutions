@@ -53,4 +53,11 @@ class SolutionsTest {
         assertEquals(2640, problems.sumSquareDifference(1,10));
         assertEquals(25164150, problems.sumSquareDifference(1,100));
     }
+
+    // Problem 7: 10001st Prime
+    @Test
+    void test_10001stPrime(){
+        assertEquals(13, problems.prime10001st(6));
+        assertEquals(104743, problems.prime10001st(10001));
+    }
 }

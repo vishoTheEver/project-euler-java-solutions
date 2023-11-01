@@ -93,4 +93,25 @@ public class Problems {
         square_of_sum = sum * sum;
         return square_of_sum-sum_of_squares;
     }
+
+    // Problem 7: 10001st Prime
+    public long prime10001st(int n){
+        ArrayList<Integer> primes = new ArrayList<>();
+        primes.add(2);
+        long current_number = 3;
+        while(primes.size()<n){
+            boolean is_prime = true;
+            for(int prime: primes){
+                if((long) prime * prime > current_number) break; // optimization considering if a > c and b > c then ab > c
+                if(current_number % prime == 0){
+                    is_prime = false;
+                    break;
+                }
+            }
+            if(is_prime) primes.add((int) current_number);
+            current_number++;
+        }
+
+        return primes.get(primes.size()-1);
+    }
 }

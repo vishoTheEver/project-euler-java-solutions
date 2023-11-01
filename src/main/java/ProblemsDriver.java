@@ -16,9 +16,12 @@ public class ProblemsDriver {
         System.out.println("Solution 4: " + problems.largestPalindromeNumber(3));
 
         // Problem 5: Smallest Multiple
-        System.out.println("Solution 5: " + problems.smallestMultiple(1,20));
+//        System.out.println("Solution 5: " + problems.smallestMultiple(1,20));
 
         // Problem 6: Sum Square Difference
         System.out.println("Solution 6: " + problems.sumSquareDifference(1,100));
+
+        // Problem 7: 10001st Prime
+        System.out.println("Solution 7: " + problems.prime10001st(10001));
     }
 }
