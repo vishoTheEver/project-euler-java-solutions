@@ -23,5 +23,8 @@ public class ProblemsDriver {
 
         // Problem 7: 10001st Prime
         System.out.println("Solution 7: " + problems.prime10001st(10001));
+
+        // Problem 16: Power Digit Sum
+        System.out.println("Solution 16: " + problems.powerDigitSum(1000));
     }
 }

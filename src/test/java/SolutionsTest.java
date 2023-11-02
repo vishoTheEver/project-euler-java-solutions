@@ -60,4 +60,11 @@ class SolutionsTest {
         assertEquals(13, problems.prime10001st(6));
         assertEquals(104743, problems.prime10001st(10001));
     }
+
+    // Problem 16: Power Digit Sum
+    @Test
+    void test_powerDigitSum(){
+        assertEquals(26, problems.powerDigitSum(15));
+        assertEquals(1366, problems.powerDigitSum(1000));
+    }
 }

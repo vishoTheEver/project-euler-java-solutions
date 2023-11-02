@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.ArrayList;
 
 public class Problems {
@@ -113,5 +114,18 @@ public class Problems {
         }
 
         return primes.get(primes.size()-1);
+    }
+
+    // Problem 16: Power Digit Sum
+    public int powerDigitSum(int pow){
+        BigInteger base = new BigInteger("2"); // unlike in python, int doesn't suffice higher numbers for Math.pow(a,b)
+        BigInteger result = base.pow(pow);
+        String num = result.toString();
+
+        int sum = 0;
+        for(int i = 0; i < num.length(); i++) {
+            sum += num.charAt(i) - '0';
+        }
+        return sum;
     }
 }
