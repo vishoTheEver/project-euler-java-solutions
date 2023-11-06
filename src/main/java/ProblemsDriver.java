@@ -24,6 +24,9 @@ public class ProblemsDriver {
         // Problem 7: 10001st Prime
         System.out.println("Solution 7: " + problems.prime10001st(10001));
 
+        // Problem 9: Special Pythagoras Triplet
+        System.out.println("Solution 9: " + problems.specialPythagorasTriplet());
+
         // Problem 16: Power Digit Sum
         System.out.println("Solution 16: " + problems.powerDigitSum(1000));
     }

@@ -61,6 +61,12 @@ class SolutionsTest {
         assertEquals(104743, problems.prime10001st(10001));
     }
 
+    // Problem 9: Special Pythagoras Triplet
+    @Test
+    void test_specialPythagorasTriplet(){
+        assertEquals(31875000, problems.specialPythagorasTriplet());
+    }
+
     // Problem 16: Power Digit Sum
     @Test
     void test_powerDigitSum(){

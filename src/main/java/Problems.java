@@ -116,6 +116,17 @@ public class Problems {
         return primes.get(primes.size()-1);
     }
 
+    // Problem 9: Special Pythagoras Triplet
+    public int specialPythagorasTriplet(){
+        int a, b, c;
+        for(a = 0; a <= 1000; a++) for(b=0; b <= 1000; b++) for(c=0; c <= 1000; c++){
+            if(a<b && b<c) if(a*a + b*b == c*c) if(a + b + c == 1000){
+                return a*b*c;
+            }
+        }
+        return 0;
+    }
+
     // Problem 16: Power Digit Sum
     public int powerDigitSum(int pow){
         BigInteger base = new BigInteger("2"); // unlike in python, int doesn't suffice higher numbers for Math.pow(a,b)
