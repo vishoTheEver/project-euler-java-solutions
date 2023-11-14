@@ -29,5 +29,8 @@ public class ProblemsDriver {
 
         // Problem 16: Power Digit Sum
         System.out.println("Solution 16: " + problems.powerDigitSum(1000));
+
+        // Problem 20: Factorial Digit Sum
+        System.out.println("Solution 20: " + problems.factorialDigitSum(10));
     }
 }

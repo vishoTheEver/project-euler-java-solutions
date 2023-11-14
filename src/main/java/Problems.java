@@ -139,4 +139,22 @@ public class Problems {
         }
         return sum;
     }
+
+    // Problem 20: Factorial Digit Sum
+    public long factorialDigitSum(long n){
+        long prod = 1;
+        for(long num = 2; num < n + 1; num++) {
+            prod *= num;
+        }
+        String str_prod = String.valueOf(prod);
+        long sum = 0;
+        for(long i = 0; i < str_prod.length(); i++){
+            Character ch = str_prod.charAt((int) i);
+            long ch_num = Integer.parseInt(String.valueOf(ch));
+            sum += ch_num;
+        }
+
+
+        return sum;
+    }
 }
